@@ -15,8 +15,6 @@
       
   vars_files:
   - vars/access_netapp.yml
-
+ 
   roles:
-    - configure_alert  
-  # roles:
-  #   - configure_alert
+  - configure_alert
