@@ -2,7 +2,7 @@
 # This code developed by Zura
 
 - name                  : login
-  na_ontap_info         :
+  na_ontap_info:
     state               : info
     hostname            : "{{ cluster_name }}"
     username            : "{{ netapp_username }}"
@@ -14,7 +14,7 @@
   register: ontap_info
 
 - name                  : Enable alert forwarding to Splunk server
-  na_ontap_command      :
+  na_ontap_command:
     hostname            : "{{ cluster_name }}"
     username            : "{{ netapp_username }}"
     password            : "{{ netapp_password }}"
