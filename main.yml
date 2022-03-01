@@ -16,4 +16,27 @@
   vars_files:
   - vars/access_netapp.yml
  
-  - include_tasks: roles/tasks/configure_alert/alert_config.yml
+  # - include_tasks: roles/tasks/configure_alert/alert_config.yml
+- name                : login
+  na_ontap_info         :
+    state               : info
+    hostname            : "{{ cluster_name }}"
+    username            : "{{ netapp_username }}"
+    password            : "{{ netapp_password }}"
+    ontapi              : 32
+    https               : true
+    validate_certs      : false
+  connection            : local
+  register: ontap_info
+
+- name                  : Enable alert forwarding to Splunk server
+  na_ontap_command      :
+    hostname            : "{{ cluster_name }}"
+    username            : "{{ netapp_username }}"
+    password            : "{{ netapp_password }}"
+    command             : [ 'cluster log-forwarding create -destination hoesplshrpinsv1.na.xom.com -port 4090']
+    privilege           : 'admin'
+    ontapi              : "32"
+    https               : true
+    validate_certs: false
+  connection: local
