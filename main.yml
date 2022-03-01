@@ -14,7 +14,7 @@
       password: "{{ netapp_password }}"
       
   vars_files:
-  - vars/access_netapp.yml
+    - vars/access_netapp.yml
  
   roles: 
-  - configure_alert
+    - configure_alert
