@@ -17,4 +17,4 @@
   - vars/access_netapp.yml
  
   roles: 
-    - configure_alert
+    - config
