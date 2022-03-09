@@ -9,12 +9,12 @@
 
   vars:
     input: &input
-      hostname: "{{ cluster_name }}"
+      hostname: "{{ inventory_hostname }}"
       username: "{{ netapp_username }}"
       password: "{{ netapp_password }}"
       
   vars_files:
-    - vars/access_netapp.yml
+  - vars/access_netapp.yml
  
   roles: 
     - configure_alert
