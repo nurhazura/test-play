@@ -1,17 +1,17 @@
 ---
 # This code developed by Zura
 
-- name                  : login
-  na_ontap_info:
-    state               : info
-    hostname            : "{{ hostname }}"
-    username            : "{{ netapp_username }}"
-    password            : "{{ netapp_password }}"
-    ontapi              : 32
-    https               : true
-    validate_certs      : false
-  connection            : local
-  register: ontap_info
+# - name                  : login
+#   na_ontap_info:
+#     state               : info
+#     hostname            : "{{ hostname }}"
+#     username            : "{{ netapp_username }}"
+#     password            : "{{ netapp_password }}"
+#     ontapi              : 32
+#     https               : true
+#     validate_certs      : false
+#   connection            : local
+#   register: ontap_info
 
 - name                  : Enable alert forwarding to Splunk server
   na_ontap_command:
