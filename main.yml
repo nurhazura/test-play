@@ -1,6 +1,6 @@
 ---
-- name: connect to play
-  hosts: all
+# - name: connect to play
+- hosts: all
   # hosts: "{{ cluster_name }}" #"{{ cluster_name }}"  #user insert cluster name
   gather_facts: no 
   vars_files:
