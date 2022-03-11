@@ -25,5 +25,4 @@
       register: ping_result
 
     - name: import config task
-      import_tasks: 
-        - config_alert.yml
+      import_tasks: config_alert.yml
