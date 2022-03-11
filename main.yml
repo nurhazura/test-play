@@ -24,5 +24,6 @@
       connection: local
       register: ping_result
 
-    - import_tasks: 
+    - name: import config task
+      import_tasks: 
         - config_alert.yml
