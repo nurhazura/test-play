@@ -24,5 +24,6 @@
       connection: local
       register: ping_result
 
-    - name: import config task
-      import_tasks: config_alert.yml
+    - name: import role config
+      import_role: 
+        name: config
