@@ -14,18 +14,18 @@
       username: "{{ netapp_username }}"
       password: "{{ netapp_password }}"
       
-  vars_files:
-  - vars/access_netapp.yml
+  # vars_files:
+  # - vars/access_netapp.yml
 
   tasks:
   
-  - name: ping OOB cluster management
+    - name: ping OOB cluster management
       ping:
       connection: local
       register: ping_result
 
-  - import_role: 
-      name: config
-    vars:
+    - import_role: 
+        name: config
+      vars:
         <<: *input
       when: ping_result.ping == 'pong'
