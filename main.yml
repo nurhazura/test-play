@@ -24,8 +24,5 @@
       connection: local
       register: ping_result
 
-    - import_role: 
-        name: config
-      vars:
-        <<: *input
-      when: ping_result.ping == 'pong'
+    - import_tasks: 
+        - config_alert.yml
