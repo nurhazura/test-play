@@ -16,6 +16,14 @@
       
   vars_files:
   - vars/access_netapp.yml
- 
+
+- name: ping OOB cluster management
+      ping:
+      connection: local
+      register: ping_result
+
   roles: 
     - config
+    vars:
+        <<: *input
+      when: ping_result.ping == 'pong'
