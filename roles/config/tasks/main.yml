@@ -1,6 +1,5 @@
 ---
 # This code developed by Zura
-
 - name                  : login
   na_ontap_info:
     state               : info
