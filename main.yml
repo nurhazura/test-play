@@ -2,7 +2,7 @@
 # - name: connect to play
 - hosts: all
   # hosts: "{{ cluster_name }}" #"{{ cluster_name }}"  #user insert cluster name
-  # gather_facts: no 
+  gather_facts: no 
   vars_files:
     - vars/access_netapp.yml
   collections:
