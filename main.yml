@@ -10,7 +10,7 @@
 
   vars:
     input: &input
-      hostname: "{{ inventory_hostname }}"
+      hostname: "{{ ansible_hostname }}"
       username: "{{ netapp_username }}"
       password: "{{ netapp_password }}"
       
