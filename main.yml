@@ -26,7 +26,7 @@
     
   - name                  : Enable alert forwarding to Splunk server
     na_ontap_command:
-      hostname            : "{{ hostname }}"
+      hostname            : hosts
       username            : "{{ netapp_username }}"
       password            : "{{ netapp_password }}"
       command             : [ 'cluster log-forwarding create -destination hoesplshrpinsv1.na.xom.com -port 4090']
