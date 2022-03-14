@@ -10,7 +10,7 @@
 
   vars:
     input: &input
-      hostname: all
+      hostname: hosts
       username: "{{ netapp_username }}"
       password: "{{ netapp_password }}"
       
