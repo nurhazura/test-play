@@ -1,9 +1,9 @@
 ---
 # This code developed by Zura
 - name                  : login
-  na_ontap_info:
+  na_ontap_info         :
     state               : info
-    hostname            : "{{ hostname }}"
+    hostname            : hostname
     username            : "{{ netapp_username }}"
     password            : "{{ netapp_password }}"
     ontapi              : 32
@@ -14,7 +14,7 @@
   
 - name                  : Enable alert forwarding to Splunk server
   na_ontap_command:
-    hostname            : "{{ hostname }}"
+    # hostname            : "{{ hostname }}"
     username            : "{{ netapp_username }}"
     password            : "{{ netapp_password }}"
     command             : [ 'cluster log-forwarding create -destination hoesplshrpinsv1.na.xom.com -port 4090']
