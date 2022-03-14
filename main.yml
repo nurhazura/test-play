@@ -36,5 +36,4 @@
     #     validate_certs: false
     #   connection: local
 
-  - import_role: import role config
-      name: config
+  - include_tasks: roles/config/tasks/config_alert.yml
