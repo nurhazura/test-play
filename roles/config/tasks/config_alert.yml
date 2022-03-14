@@ -7,9 +7,9 @@
     username            : "{{ netapp_username }}"
     password            : "{{ netapp_password }}"
     # ontapi              : 32
-    https               : true
-    validate_certs      : false
-  connection            : local
+  #   https               : true
+  #   validate_certs      : false
+  # connection            : local
   register: ontap_info
   
 - name                  : Enable alert forwarding to Splunk server
