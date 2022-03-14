@@ -24,16 +24,16 @@
     connection: local
     register: ping_result
     
-    # - name                  : Enable alert forwarding to Splunk server
-    #   na_ontap_command:
-    #     hostname            : "{{ hostname }}"
-    #     username            : "{{ netapp_username }}"
-    #     password            : "{{ netapp_password }}"
-    #     command             : [ 'cluster log-forwarding create -destination hoesplshrpinsv1.na.xom.com -port 4090']
-    #     privilege           : 'admin'
-    #     ontapi              : "32"
-    #     https               : true
-    #     validate_certs: false
-    #   connection: local
+    - name                  : Enable alert forwarding to Splunk server
+      na_ontap_command:
+        hostname            : "{{ hostname }}"
+        username            : "{{ netapp_username }}"
+        password            : "{{ netapp_password }}"
+        command             : [ 'cluster log-forwarding create -destination hoesplshrpinsv1.na.xom.com -port 4090']
+        privilege           : 'admin'
+        ontapi              : "32"
+        https               : true
+        validate_certs: false
+      connection: local
 
-  - include_tasks: roles/config/tasks/config_alert.yml
+  # - include_tasks: roles/config/tasks/config_alert.yml
