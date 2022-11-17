@@ -35,7 +35,8 @@
       hostname            : "{{ inventory_hostname }}"
       username            : "{{ netapp_username }}"
       password            : "{{ netapp_password }}"
-      command             : [ 'cluster log-forwarding create -destination hoesplshrpinsv1.na.xom.com -port 4090']
+  #    command             : [ 'cluster log-forwarding create -destination hoesplshrpinsv1.na.xom.com -port 4090']
+      command             : [ 'system cluster-switch show']
       privilege           : 'admin'
       ontapi              : "32"
       https               : true
